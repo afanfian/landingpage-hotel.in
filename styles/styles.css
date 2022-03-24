@@ -1,0 +1,619 @@
+/* || VARIABLES */
+:root {
+  --primary: #38b6ff;
+  --primary-hover: #0092d6;
+  --heading: black;
+}
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+a,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* || FONTS */
+h1 {
+  color: var(--heading);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+h2,
+h3,
+h4 {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+/* || BASE STYLES */
+
+.button {
+  display: inline-block;
+  padding: 8px 34px;
+  background-color: var(--primary);
+  color: white !important;
+  border-radius: 33.5px;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* || DESKTOP STYLES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin: 0 100px !important;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* | NAVBAR */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+  transition: 0.4s;
+  padding: 30px 100px;
+  align-items: center;
+}
+
+nav.fade-scroll {
+  padding: 10px 100px;
+  background: white;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.site-nav a {
+  color: var(--heading);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.site-nav img {
+  width: 60px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a {
+  margin-right: 45px;
+}
+
+.nav-right > * {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(45px * var(--tw-space-x-reverse));
+  margin-left: calc(45px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* | HERO */
+.hero {
+  padding-top: 200px;
+  margin-top: 3rem;
+}
+.hero-text {
+  grid-column: 1 / 7;
+}
+
+.leading {
+  width: 350px;
+  font-size: 24px;
+  margin-top: 25px;
+  color: #e96754;
+}
+
+.hero-text > .button {
+  font-size: 27px;
+  font-weight: 600;
+  margin-top: 56px;
+  width: 365px;
+  text-align: center;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.04);
+  padding: 14px 0px;
+}
+
+.hero-image {
+  grid-column: 7 / 13;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* | ABOUT */
+
+.about {
+  background: white url(../images/bg-about.png) no-repeat center center;
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 25rem;
+}
+
+.about h2 {
+  font-size: 48px;
+  margin-bottom: 34px;
+}
+
+.about p {
+  width: 850px;
+  margin: 0 auto;
+  font-size: 24px;
+  color: #637582;
+}
+
+/* || MOBILE MEDIUM STYLES */
+@media screen and (max-width: 576px) {
+  header {
+    height: 450px;
+  }
+
+  .button {
+    padding: 5px 9px;
+  }
+  .grid {
+    margin: 0 24px !important;
+  }
+
+  /* |  HEADER*/
+  .site-nav {
+    padding: 17px 30px !important;
+  }
+
+  .nav-left a img {
+    width: 31px !important;
+  }
+
+  .nav-right a {
+    font-size: 8px !important;
+  }
+
+  .nav-right > * {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(14px * var(--tw-space-x-reverse));
+    margin-left: calc(14px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .hero {
+    padding-top: 95px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text {
+    text-align: center;
+    place-content: center;
+  }
+
+  .hero-text h1 {
+    text-align: center;
+    font-size: 25px !important;
+  }
+
+  .leading {
+    width: 267px;
+    margin: 5px auto;
+    margin-bottom: 0 !important;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .hero-text > .button {
+    width: 150px;
+    font-size: 10px;
+    margin: 27px auto;
+    padding: 8px 0 !important;
+    margin-bottom: 0 !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    place-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    margin: 0;
+    place-content: center;
+    width: 220px;
+    height: 132.84px;
+  }
+
+  /* | ABOUT */
+
+  .about {
+    height: 15rem;
+  }
+
+  .about h2 {
+    font-size: 20px;
+  }
+
+  .about p {
+    width: 300px !important;
+    font-size: 15px !important;
+  }
+  .social {
+    padding-left: 0 !important;
+  }
+}
+
+/* || TABLETS STYLES */
+@media screen and (max-width: 768px) {
+  .site-nav a:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+  .nav-left a:nth-child(2),
+  .nav-left a:nth-child(3) {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text {
+    grid-column: 1 / 7;
+  }
+  .hero-text > .button {
+    width: 250px;
+    font-size: 15px;
+    margin: 27px auto;
+    margin-bottom: 0 !important;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+}
+
+/* || LAPTOP STYLES */
+@media screen and (max-width: 1024px) {
+  .grid {
+    margin: 0 50px;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+  }
+
+  .nav-left {
+    grid-column: 2 / 7;
+  }
+
+  .hero-text {
+    grid-column: 1 / 7;
+  }
+
+  .hero-image {
+    align-self: flex-end;
+  }
+
+  .about p {
+    font-size: 18px;
+    width: 700px;
+  }
+}
+
+/* Mencoba */
+.footerfix {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex-container-footerfix > div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+/*Tombol Daftar*/
+@media screen and (min-width: 720px) {
+  .btndaftar {
+    width: 400px;
+    height: 70px;
+    left: 508px;
+    top: 399.92px;
+    background: #faaa42;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.04);
+    border-radius: 33.5px;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 25px;
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btndaftar:hover {
+    background-color: var(--primary-hover);
+  }
+}
+@media screen and (max-width: 1080px) {
+  .btndaftar {
+    width: 175px;
+    height: 40px;
+    left: 508px;
+    top: 399.92px;
+    background: #faaa42;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.04);
+    border-radius: 33.5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*Footer*/
+@media screen and (max-width: 1080px) {
+  .logofooter {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .footerfix {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .About-Footer {
+    width: 100%;
+  }
+}
+
+/* Section Fasilitas */
+section.fasilitas {
+  padding-top: 80px;
+  margin-top: -80px;
+  padding-bottom: 90px;
+}
+
+section.fasilitas h2 {
+  font-size: 50px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+
+section.fasilitas .ket-fasilitas {
+  font-family: "Poppins", sans-serif;
+  color: rgba(97, 97, 97, 0.8);
+  font-weight: 400;
+  font-size: 1.25rem;
+  padding-top: 10px;
+}
+
+/* Paket Belajar */
+section.harga {
+  font-family: "Poppins", sans-serif;
+  background-color: #fef6f3;
+  /* #fef6f3 */
+  margin-top: -80px;
+  padding-top: 80px;
+  padding-bottom: 47px;
+  color: #616161;
+}
+
+section.harga h2 {
+  font-size: 50px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 78px;
+}
+
+section.harga .judul-harga {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+section.harga .lead-harga {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(97, 97, 97, 0.8);
+  margin-bottom: 24px;
+}
+
+section.harga li {
+  line-height: 35px;
+}
+section.harga li::before {
+  content: "\2713";
+  color: #37ed26;
+  padding-right: 13px;
+  font-weight: bold;
+}
+
+section.harga p.harga-asli {
+  color: #ff5858;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: line-through 1.5px;
+  margin-bottom: 0;
+}
+
+section.harga p.harga-diskon {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+section.harga .btn-primary {
+  background-color: rgb(55, 182, 4);
+  border-radius: 25px;
+  border: none;
+  margin-top: 20px;
+}
+
+section.harga .btn-primary:hover {
+  background-color: rgb(31, 109, 1);
+}
+
+section.harga .card {
+  border: 4px solid transparent;
+  border-radius: 18px;
+}
+
+section.harga .card:hover {
+  cursor: pointer;
+  border: 4px solid #38b6ff;
+  transition: all 0.5s;
+}
+
+section.harga .card-body {
+  padding: 21px 34px 31px;
+}
+
+section.harga span.badge {
+  background-color: #ff3700;
+}
+
+/* Mobile Medium <==576px*/
+@media screen and (max-width: 576px) {
+  section.fasilitas h2 {
+    font-size: 2.25rem !important;
+  }
+
+  section.fasilitas .img-fasilitas {
+    width: 150px !important;
+  }
+
+  section.fasilitas .ket-fasilitas {
+    font-size: 1rem !important;
+  }
+
+  section.harga h2 {
+    font-size: 2.25rem !important;
+  }
+  section.harga .judul-harga {
+    font-size: 1.25rem;
+  }
+  sectionpharga .lead-harga {
+    font-size: 1rem;
+  }
+  section.harga li {
+    font-size: 0.9rem;
+  }
+  section.harga .harga-asli {
+    font-size: 1.125rem;
+  }
+  section.harga .harga-diskon {
+    font-size: 1.75rem;
+  }
+}
+section.harga a.btn-primary {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.125rem;
+}
+
+/* Tablet <==768px*/
+@media screen and (max-width: 768px) {
+  section.fasilitas .img-fasilitas {
+    width: 250px;
+  }
+  section.fasilitas .ket-fasilitas {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  section.harga .row {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
+}
+
+/* Laptop <== 1024px*/
+@media screen and (max-width: 1024px) {
+  section.fasilitas .img-fasilitas {
+    max-width: 300px;
+  }
+}
+
+/* FAB CS Whatsapp */
+/* .float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+.my-float {
+  margin-top: 16px;
+} */
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0092d6;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0092d6;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
